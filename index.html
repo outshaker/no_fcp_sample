@@ -10,10 +10,10 @@
     <link rel="bookmark" href="./img/favicon.png" />
     <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" />
     <link rel="preconnect" href="https://duit4whzooiue.cloudfront.net">
-    <link rel="preload" as="style" href="./lib/bootstrap.min.css" />
-    <link rel="preload" as="style" href="./lib/fontawesome.min.css" />
-    <link rel="preload" as="style" href="./lib/owl.carousel.css" />
-    <link rel="preload" as="style" href="./lib/owl.theme.default.css" />
+    <link rel="stylesheet" href="./lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="./lib/fontawesome.min.css" />
+    <link rel="stylesheet" href="./lib/owl.carousel.css" />
+    <link rel="stylesheet" href="./lib/owl.theme.default.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/cookie.css" />
@@ -1423,112 +1423,11 @@
       </div>
     </div>
 
-    <script src="./lib/jquery-3.4.1.min.js" async></script>
-    <script src="./lib/vue.min.js" async></script>
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/vue.min.js"></script>
     <script src="./lib/bootstrap.bundle.min.js" async></script>
     <script src="./lib/jquery.cookie.js" async></script>
     <script src="./lib/owl.carousel.js" async></script>
-    <script src="./js/home.js" defer></script>
-    <script src="./js/header.js" async></script>
-    <script src="./js/main.js" async></script>
-
-    <script>
-      var languages = ["de", "en", "fr"];
-
-      var msg_p_header_not_any_result = "No result found.";
-      var msg_p_header_search = "SEARCH";
-      var msg_p_header_search_placeholder = "Insert keyword for search product";
-      var msg_p_footer_subscribe_is_subscribed = "Is Subscribed";
-      var msg_p_footer_subscribe_success = "Subscription Successful";
-      var msg_p_footer_subscribe_fail = "Subscription Failed";
-
-      var msg_quickNav_title = "Service Hotline";
-      var msg_quickNav_tel = "+49 (0)4102 468 – 950";
-      var msg_quickNav_line1 = "Monday – Thursday 8.30 a.m. – 12.00 p.m. / 1.00 p.m. – 5.30 p.m.";
-      var msg_quickNav_line2 = "Friday 8.30 a.m. – 12.00 p.m. / 1.00 p.m. – 3.00 p.m.";
-      var msg_quickNav_line3 = "free of charge from Germany";
-      var msg_contact_us = "Contact us";
-      var msg_quickNav_title2 = "Hotline Hours";
-
-      var cookie_banner_content =
-        "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use this website.<br><a href='privacy_protection.php' >More Information</a>";
-      var cookie_banner_btn = "Agree";
-      var cookiePageBtn4 = "Allow All";
-      var cookiePageBtn5 = "My Preference";
-
-      // ---
-      var apiUrl = "https://admin.icybox.de/api/"; // dev2 測試機後台
-      var lang = "de";
-      var baseUrl = "/";
-
-      function changeLang(locale) {
-        let pathname = window.location.pathname;
-        languages.forEach(function (v, k) {
-          if (pathname.startsWith("/" + v + "/")) {
-            pathname = "/" + pathname.replace("/" + v + "/", "");
-          }
-        });
-        let localUrl = baseUrl + locale + pathname + window.location.search;
-        window.location = localUrl;
-      }
-
-      function home() {
-        let pathname = window.location.pathname;
-        let locale = "";
-        if (languages.includes(pathname.split("/", 2)[1])) {
-          locale = pathname.split("/", 2)[1];
-          window.location = baseUrl + locale + "/";
-        } else {
-          window.location = baseUrl;
-        }
-      }
-
-      function setLanguage() {
-        let pathname = window.location.pathname;
-        if (languages.includes(pathname.split("/", 2)[1])) {
-          lang = pathname.split("/", 2)[1];
-        }
-      }
-
-      function validateEmail(email) {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-      }
-
-      function subscribe() {
-        let clientEmail = $("#clientEmail").val();
-
-        //
-
-        if (clientEmail === undefined || clientEmail === "" || validateEmail(clientEmail) === false) {
-          alert(msg_p_footer_subscribe_fail);
-          return;
-        }
-
-        let postData = {
-          clientEmail: clientEmail,
-        };
-        $.ajax({
-          type: "post",
-          url: apiUrl + "mailChimp/emailSubscribe",
-          data: postData,
-          success: function (data) {
-            if (data.status === 0) {
-              // alert(data.message);
-              if (data.data === "IsSubscribed") {
-                alert(msg_p_footer_subscribe_is_subscribed);
-              } else {
-                alert(msg_p_footer_subscribe_success);
-              }
-              $("#clientEmail").val("");
-            } else {
-              alert(msg_p_footer_subscribe_fail);
-            }
-            // location.reload();
-          },
-          dataType: "json",
-        });
-      }
-    </script>
+    <script src="./js/main.js" defer></script>
   </body>
 </html>
