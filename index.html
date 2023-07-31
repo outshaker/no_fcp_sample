@@ -285,7 +285,9 @@
               <div class="header_col">
                 <a href="https://icybox.de/en/" class="brand"><img src="./img/logo.png" alt="IcyBox" /></a>
                 <div class="menu">
-                  <button class="menu_item">PRODUCTS</button> <a href="https://icybox.de/en/download.php" class="menu_item">SUPPORT</a> <a href="https://icybox.de/en/news/" class="menu_item">BLOG</a>
+                  <button class="menu_item">PRODUCTS</button>
+                  <a href="https://icybox.de/en/download.php" class="menu_item">SUPPORT</a>
+                  <a href="https://icybox.de/en/news/" class="menu_item">BLOG</a>
                   <a href="https://icybox.de/en/about.php" class="menu_item">ABOUT</a>
                 </div>
               </div>
@@ -1429,5 +1431,18 @@
     <script src="./lib/jquery.cookie.js" async></script>
     <script src="./lib/owl.carousel.js" async></script>
     <script src="./js/main.js" defer></script>
+    <script>
+      function changeLang(locale) {
+        const languages = ["de", "en", "fr"];
+        let pathname = window.location.pathname;
+        languages.forEach(function (v, k) {
+          if (pathname.startsWith("/" + v + "/")) {
+            pathname = "/" + pathname.replace("/" + v + "/", "");
+          }
+        });
+        let localUrl = "/" + locale + pathname + window.location.search;
+        window.location = localUrl;
+      }
+    </script>
   </body>
 </html>

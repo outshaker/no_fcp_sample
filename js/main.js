@@ -1,5 +1,3 @@
-var languages = ["de", "en", "fr"];
-
 var msg_p_header_not_any_result = "No result found.";
 var msg_p_header_search = "SEARCH";
 var msg_p_header_search_placeholder = "Insert keyword for search product";
@@ -22,20 +20,11 @@ var cookiePageBtn4 = "Allow All";
 var cookiePageBtn5 = "My Preference";
 
 // ---
+
 var apiUrl = "https://admin.icybox.de/api/"; // dev2 測試機後台
+var languages = ["de", "en", "fr"];
 var lang = "de";
 var baseUrl = "/";
-
-function changeLang(locale) {
-  let pathname = window.location.pathname;
-  languages.forEach(function (v, k) {
-    if (pathname.startsWith("/" + v + "/")) {
-      pathname = "/" + pathname.replace("/" + v + "/", "");
-    }
-  });
-  let localUrl = baseUrl + locale + pathname + window.location.search;
-  window.location = localUrl;
-}
 
 function home() {
   let pathname = window.location.pathname;
@@ -312,49 +301,6 @@ const vm = new Vue({
 
         this.scroller();
 
-        // const $owlCarousel = $('.owl-carousel');
-        // if ( $owlCarousel.length ) {
-        //     $(document).ready(function(){
-        //         $owlCarousel.owlCarousel({
-        //             items: 1,
-        //             loop: true,
-        //             nav: true,
-        //             autoplay: true,
-        //             autoplayTimeout:5000,
-        //             autoplayHoverPause: true,
-        //             video:true
-        //         });
-        //     });
-        // }
-
-
-        const $owlCarousel = $('.owl-carousel');
-        if ($owlCarousel.length) {
-            if (this.isMobile()) {
-                $owlCarousel.owlCarousel({
-                    items: 1,
-                    loop: true,
-                    nav: true,
-                    autoplay: true,
-                    dots: false,
-                    autoplayTimeout: 8000,
-                    autoplayHoverPause: true,
-                    video: true
-                });
-            } else {
-                $owlCarousel.owlCarousel({
-                    items: 1,
-                    loop: true,
-                    nav: true,
-                    autoplay: true,
-                    // dots: false,
-                    autoplayTimeout: 8000,
-                    autoplayHoverPause: true,
-                    video: true
-                });
-            }
-        }
-
         // const $albumCarousel = $('.album-carousel');
         // if ( $albumCarousel.length ) {
         //     $(document).ready(function(){
@@ -563,19 +509,25 @@ const vm = new Vue({
                 fx($(this), $(this).scrollTop());
             });
         },
-        isMobile() {
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                return true
-            } else {
-                return false
-            }
-        }
-
     }
 });
 
 $(document).ready(function () {
-  console.log('ready') //DEV
+  const kvCarousel = $('.kv-carousel')
+  if (kvCarousel.length) {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    kvCarousel.owlCarousel({
+      items: 1,
+      loop: true,
+      nav: true,
+      autoplay: true,
+      dots: isMobile ? true : false,
+      autoplayTimeout: 8000,
+      autoplayHoverPause: true,
+      video: true
+    })
+  }
+
   const productOwl = $(".productCarouselSection .owl-carousel");
   productOwl.owlCarousel({
     loop: true,
