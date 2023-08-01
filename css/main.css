@@ -13070,7 +13070,7 @@ li.u-dsp {
     font-style: normal;
     font-weight: 200;
     src: url("../lib/fonts/source-sans-pro-v21-latin-200.eot");
-    src: local(""), url("../lib/fonts/source-sans-pro-v21-latin-200.eot?#iefix") format("embedded-opentype"), url("../lib/fonts/source-sans-pro-v21-latin-200.woff2") format("woff2"), url("../lib/fonts/source-sans-pro-v21-latin-200.woff") format("woff"), url("../lib/fonts/source-sans-pro-v21-latin-200.ttf") format("truetype"), url("../lib/fonts/source-sans-pro-v21-latin-200.svg#SourceSansPro") format("svg")
+    src: local(""), url("../lib/fonts/source-sans-pro-v21-latin-200.eot?#iefix") format("embedded-opentype"), url("../lib/fonts/source-sans-pro-v21-latin-200.woff2") format("woff2"), url("../lib/fonts/source-sans-pro-v21-latin-200.woff") format("woff"), url("../lib/fonts/source-sans-pro-v21-latin-200.ttf") format("truetype"), url("../lib/fonts/source-sans-pro-v21-latin-200.svg#SourceSansPro") format("svg");
     font-display: swap;
 }
 
