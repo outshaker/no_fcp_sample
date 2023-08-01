@@ -521,7 +521,7 @@ $(document).ready(function () {
       loop: true,
       nav: true,
       autoplay: true,
-      dots: isMobile ? true : false,
+      dots: isMobile ? false : true,
       autoplayTimeout: 8000,
       autoplayHoverPause: true,
       video: true
