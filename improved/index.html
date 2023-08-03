@@ -268,7 +268,7 @@
   </head>
 
   <body>
-    <div id="app" class="loaded">
+    <div id="app">
       <header class="header">
         <div class="header__service">
           <div class="inner u-wx:1920px">
@@ -1370,11 +1370,11 @@
     </div>
 
     <script src="./lib/jquery-3.4.1.min.js"></script>
-    <script src="./lib/vue.min.js"></script>
     <script src="./lib/bootstrap.bundle.min.js" async></script>
-    <script src="./lib/jquery.cookie.js" async></script>
-    <script src="./lib/owl.carousel.js" async></script>
-    <script src="./js/main.js" defer></script>
+    <script src="./lib/jquery.cookie.js" id="jquery_cookie" async></script>
+    <script src="./lib/owl.carousel.js" id="owl_carousel" async></script>
+    <script src="./lib/vue.min.js" id="vue" async></script>
+    <script src="./js/main.js"></script>
     <script>
       function changeLang(locale) {
         const languages = ["de", "en", "fr"];
