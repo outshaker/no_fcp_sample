@@ -13187,7 +13187,7 @@ img {
 
 #app.loaded {
     opacity: 1;
-    transition: opacity .54s ease
+    /* transition: opacity .54s ease */
 }
 
 .inner {
@@ -13532,7 +13532,7 @@ img {
 .fxSection {
     opacity: 0;
     transform: translateY(10%);
-    transition: .4s ease-out
+    /* transition: .4s ease-out */
 }
 
 .fxSection.is\:on {
@@ -13568,7 +13568,7 @@ img {
 .fxSection_item {
     opacity: 0;
     transform: translateY(10%);
-    transition: .48s ease-out
+    /* transition: .48s ease-out */
 }
 
 .contact_item.poster {
@@ -19804,7 +19804,6 @@ span.sPanel_icon .icon {
     aspect-ratio: 180/112.62
 }
 
-
 @media only screen and (max-width: 992px) {
     body {
         overflow-x: hidden;
@@ -19815,4 +19814,8 @@ span.sPanel_icon .icon {
     }
 
 
+}
+
+.svg-icon {
+  user-select: none;
 }

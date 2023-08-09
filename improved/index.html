@@ -23,25 +23,23 @@
     <meta name="keywords" content="IcyBox, RaidSonic, docking station, Docking Station, storage solutions, mobile racks, external data storage, hubs, adapters, workplace solutions, accessories, innovative products, quality products, customer service, Germany, Europe, Asia, Australia, USA.">
 
     <link rel="canonical" href="https://icybox.de/en/">
-    <link hreflang="de" rel="alternate" href="./#/de/">
-    <link hreflang="en" rel="alternate" href="./#/en/">
-    <link hreflang="fr" rel="alternate" href="./#/fr/">
+    <link hreflang="de" rel="alternate" href="#/de/">
+    <link hreflang="en" rel="alternate" href="#/en/">
+    <link hreflang="fr" rel="alternate" href="#/fr/">
 
     <link rel="shortcut icon" href="../favicon.png?v=1682055288">
     <link rel="bookmark" href="../favicon.png?v=1682055288">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png?v=1682055288">
 
-    <link rel="preload" href="../fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./IcyBox/Translations/4vLIsLWT4Lzs5bWKKGhC-en_banners_phone_image_52.webp" as="image" type="image/webp" media="(max-width: 940px)">
+    <link rel="preload" href="./IcyBox/Translations/wthGywuAvVIJ2wzH7dlK-en_banners_image_52.webp" as="image" type="image/webp" media="(min-width: 941px)">
     <link rel="preload" href="../fonts/source-sans-pro-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preload" href="../fonts/source-sans-pro-v21-latin-300.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preload" href="../fonts/source-sans-pro-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./lib/fontawesome.min.css?v=1682575007">
-    <link rel="stylesheet" href="./lib/owl.carousel.css?v=1682575007">
-    <link rel="stylesheet" href="./lib/owl.theme.default.css?v=1682575007">
-    <link rel="stylesheet" href="./css/main.css?v=1686107003">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/cookie.css">
     <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/owl.carousel.css?v=1682575007">
+    <link rel="stylesheet" href="./css/main.css?v=1686107003">
+    <link rel="stylesheet" href="./css/shared.css">
 
     <title>ICY BOX - Create your workspace.</title>
 
@@ -58,7 +56,7 @@
     <meta property="fb:admins" content="100001604603012">
     <meta property="fb:pages" content="553067344704857">
     <meta property="og:title" content="ICY BOX - Create your workspace.">
-    <meta property="og:url" content="./#/en/">
+    <meta property="og:url" content="#/en/">
     <meta property="og:description" content="Hello World">
     <meta property="og:image" content="../opengraph.png">
     <meta property="og:image:alt" content="Hello World">
@@ -133,7 +131,7 @@
               <div class="header_col header_lang" style="position: absolute;right: 10px;margin-top: 20px;z-index:99">
                 <div class="header_func">
                   <button class="search-btn" @click="searchPanelSwitch">
-                    <i class="icon fas fa-search"></i>
+                    <img src="./img/fa-search.svg" alt="search" class="svg-icon">
                   </button>
                   <div class="lang" onmouseover="changeSearchNewZindex(0)" onmouseleave="changeSearchNewZindex(99)">
                     <div class="dropdown">
@@ -369,45 +367,69 @@
       <search-bar :search-panel="status.searchPanel" @search-panel-switch="searchPanelSwitch"></search-bar>
       <main class="wrap">
         <div class="owl-carousel kv-carousel fxSection">
-          <div class="carousel" @click="toBannerLink('./#/en/dockingstation/IB-DK4060-CPD')" style="cursor: pointer;">
-            <div class="carousel_content"></div>
-            <div class="carousel_media u-dsp@sm:n u-dsp@lg" style="background-image: url('./IcyBox/Translations/wthGywuAvVIJ2wzH7dlK-en_banners_image_52.webp')"></div>
-            <div class="carousel_media u-dsp@lg:n u-dsp@sm" style="background-image: url('./IcyBox/Translations/4vLIsLWT4Lzs5bWKKGhC-en_banners_phone_image_52.webp')"></div>
+          <div>
+            <a href="#/en/dockingstation/IB-DK4060-CPD">
+              <picture>
+                <source media="(min-width: 941px)" srcset="./IcyBox/Translations/wthGywuAvVIJ2wzH7dlK-en_banners_image_52.webp">
+                <img src="./IcyBox/Translations/4vLIsLWT4Lzs5bWKKGhC-en_banners_phone_image_52.webp" alt="">
+              </picture>
+            </a>
           </div>
-          <div class="carousel" @click="toBannerLink('./#/dockingstation/IB-DK2288AC')" style="cursor: pointer;">
-            <div class="carousel_content"></div>
-            <div class="carousel_media u-dsp@sm:n u-dsp@lg" style="background-image: url('./IcyBox/Translations/H9sEslIjcaa5auJOjuDp-en_banners_image_51.webp')"></div>
-            <div class="carousel_media u-dsp@lg:n u-dsp@sm" style="background-image: url('./IcyBox/Translations/zlS0wVZDVkWDJh0AB6lo-en_banners_phone_image_51.webp')"></div>
+          <div>
+            <a href="#/dockingstation/IB-DK2288AC">
+              <picture>
+                <source media="(min-width: 941px)" srcset="./IcyBox/Translations/H9sEslIjcaa5auJOjuDp-en_banners_image_51.webp">
+                <img src="./IcyBox/Translations/zlS0wVZDVkWDJh0AB6lo-en_banners_phone_image_51.webp" alt="">
+              </picture>
+            </a>
           </div>
-          <div class="carousel" @click="toBannerLink('./#/product/#TB4')" style="cursor: pointer;">
-            <div class="carousel_content"></div>
-            <div class="carousel_media u-dsp@sm:n u-dsp@lg" style="background-image: url('./IcyBox/Translations/IXi7CliUQLHQd7y83Bcm-en_banners_image_39.webp')"></div>
-            <div class="carousel_media u-dsp@lg:n u-dsp@sm" style="background-image: url('./IcyBox/Translations/VyivWB0Mq6QpfAN3pxC1-en_banners_phone_image_39.webp')"></div>
+          <div>
+            <a href="#/product/TB4">
+              <picture>
+                <source media="(min-width: 941px)" srcset="./IcyBox/Translations/IXi7CliUQLHQd7y83Bcm-en_banners_image_39.webp">
+                <img src="./IcyBox/Translations/VyivWB0Mq6QpfAN3pxC1-en_banners_phone_image_39.webp" alt="">
+              </picture>
+            </a>
           </div>
-          <div class="carousel" @click="toBannerLink('./#/en/product.php?id=530')" style="cursor: pointer;">
-            <div class="carousel_content"></div>
-            <div class="carousel_media u-dsp@sm:n u-dsp@lg" style="background-image: url('./IcyBox/Translations/5lVCUk0l7ac4IcF9u3Sj-en_banners_image_38.webp')"></div>
-            <div class="carousel_media u-dsp@lg:n u-dsp@sm" style="background-image: url('./IcyBox/Translations/DnVk2mEgSMChyWuTOR3V-en_banners_phone_image_38.webp')"></div>
+          <div>
+            <a href="#/en/product.php?id=530">
+              <picture>
+                <source media="(min-width: 941px)" srcset="./IcyBox/Translations/5lVCUk0l7ac4IcF9u3Sj-en_banners_image_38.webp">
+                <img src="./IcyBox/Translations/DnVk2mEgSMChyWuTOR3V-en_banners_phone_image_38.webp" alt="">
+              </picture>
+            </a>
           </div>
-          <div class="carousel" @click="toBannerLink('./#/en/product.php?id=504')" style="cursor: pointer;">
-            <div class="carousel_content"></div>
-            <div class="carousel_media u-dsp@sm:n u-dsp@lg" style="background-image: url('./IcyBox/Translations/ouiFVZyGvsW0nyUnhe43-en_banners_image_34.webp')"></div>
-            <div class="carousel_media u-dsp@lg:n u-dsp@sm" style="background-image: url('./IcyBox/Translations/jZGAX2CRxuJhJ02Foa3M-en_banners_phone_image_34.webp')"></div>
+          <div>
+            <a href="#/en/product.php?id=504">
+              <picture>
+                <source media="(min-width: 941px)" srcset="./IcyBox/Translations/ouiFVZyGvsW0nyUnhe43-en_banners_image_34.webp">
+                <img src="./IcyBox/Translations/jZGAX2CRxuJhJ02Foa3M-en_banners_phone_image_34.webp" alt="">
+              </picture>
+            </a>
           </div>
-          <div class="carousel" @click="toBannerLink('./#/en/product.php?id=502')" style="cursor: pointer;">
-            <div class="carousel_content"></div>
-            <div class="carousel_media u-dsp@sm:n u-dsp@lg" style="background-image: url('./IcyBox/Translations/BGmRQHZ92NAXUzB8ktFU-en_banners_image_31.webp')"></div>
-            <div class="carousel_media u-dsp@lg:n u-dsp@sm" style="background-image: url('./IcyBox/Translations/BftiWw19zAcMes9mmSRL-en_banners_phone_image_31.webp')"></div>
+          <div>
+            <a href="#/en/product.php?id=502">
+              <picture>
+                <source media="(min-width: 941px)" srcset="./IcyBox/Translations/BGmRQHZ92NAXUzB8ktFU-en_banners_image_31.webp">
+                <img src="./IcyBox/Translations/BftiWw19zAcMes9mmSRL-en_banners_phone_image_31.webp" alt="">
+              </picture>
+            </a>
           </div>
-          <div class="carousel">
-            <div class="carousel_content"></div>
-            <div class="carousel_media u-dsp@sm:n u-dsp@lg" style="background-image: url('./IcyBox/Translations/8C7PHT6tGxkTi0Mg1xqf-en_banners_image_32.webp')"></div>
-            <div class="carousel_media u-dsp@lg:n u-dsp@sm" style="background-image: url('./IcyBox/Translations/akt6HcSbmBJYWAAQZavt-en_banners_phone_image_32.webp')"></div>
+          <div>
+            <a href="#">
+              <picture>
+                <source media="(min-width: 941px)" srcset="./IcyBox/Translations/8C7PHT6tGxkTi0Mg1xqf-en_banners_image_32.webp">
+                <img src="./IcyBox/Translations/akt6HcSbmBJYWAAQZavt-en_banners_phone_image_32.webp" alt="">
+              </picture>
+            </a>
           </div>
-          <div class="carousel" @click="toBannerLink('./#/en/product-list.php?id=7')" style="cursor: pointer;">
-            <div class="carousel_content"></div>
-            <div class="carousel_media u-dsp@sm:n u-dsp@lg" style="background-image: url('./IcyBox/Translations/MEB8u4u4L25gxSc7BkpS-en_banners_image_30.webp')"></div>
-            <div class="carousel_media u-dsp@lg:n u-dsp@sm" style="background-image: url('./IcyBox/Translations/etXYgdAw6zYapG5EfDX1-en_banners_phone_image_30.webp')"></div>
+          <div>
+            <a href="#/en/product-list.php?id=7">
+              <picture>
+                <source media="(min-width: 941px)" srcset="./IcyBox/Translations/MEB8u4u4L25gxSc7BkpS-en_banners_image_30.webp">
+                <img src="./IcyBox/Translations/etXYgdAw6zYapG5EfDX1-en_banners_phone_image_30.webp" alt="">
+              </picture>
+            </a>
           </div>
         </div>
         <section class="pageSection productCarouselSection fxSection">
@@ -611,7 +633,7 @@
                   <span class="u-clr:secondary">IB-HUB801-TB4 Big Power. Small Package. Thunderbolt™ 4</span>
                 </h3>
                 <p>A hub with top marks! This hub is a high-performance accessory that manages three Thunderbolt™ 4 interfaces and even offers a USB 3.2 Gen 2 port for USB Type-A devices. In addition to 85 W of notebook charging power, the hub supports one 8K@30 Hz or two 4K@60 Hz displays.</p>
-                <a class="discover" href="./#/en/product.php?id=541">
+                <a class="discover" href="#/en/product.php?id=541">
                   Discover
                   <img src="./img/discover-arrow.svg" class="discover_arrow" />
                 </a>
@@ -800,7 +822,7 @@
             <div id="cookie-detail">
               <div class="detail-wrap">
                 <a class="btn-back" onclick="hideDetail()">
-                  <i class="icon fas fa-chevron-left"></i>
+                  <img src="./img/fa-chevron-left.svg" alt="chevron-left" class="svg-icon">
                 </a>
                 <div class="cookie-item">
                   <div id='firstPartyCookies'>
@@ -1546,8 +1568,6 @@
         })
       }
     </script>
-    <script src="./js/home.js?v=1683854498"></script>
-    <script src="./js/header.js?v=1683872263"></script>
-    <script src="./js/main.js?v=1683872263"></script>
+    <script src="./js/main.js?v=1"></script>
   </body>
 </html>

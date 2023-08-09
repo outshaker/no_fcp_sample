@@ -1,3 +1,5 @@
+/* cookie.css */
+
 :root {
     --font-family-ui: 'Source Sans Pro', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans"
 }
@@ -589,3 +591,130 @@
     }
 
 }
+
+/* header.css */
+
+body {
+    overflow-x: hidden;
+}
+
+.mobile-menu {
+    bottom: 0;
+    height: auto;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+#lang-menu {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#lang-menu svg {
+    margin-left: 0.75rem;
+}
+
+.lang .lang_link span.active {
+    color: #00aeef;
+}
+
+.lang .dropdown-menu {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 0.75rem rgb(0 0 0 / 24%);
+    transform: translate3d(9%, 10px, 0) !important;
+    opacity: 0;
+    transition: all .3s linear;
+    display: block;
+    position: absolute;
+    inset: 0 0 auto auto;
+    pointer-events: none;
+    min-width: 200px;
+}
+
+.lang:hover .dropdown-menu {
+    transform: translate3d(9%, 25px, 0) !important;
+    inset: 0 0 auto auto!important;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* .lang .dropdown-menu.show {
+    transform: translate3d(9%, 25%, 0) !important;
+    inset: 0 0 auto auto!important;
+    opacity: 1;
+    pointer-events: auto;
+} */
+
+.lang .dropdown-menu .lang_link {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+}
+
+.lang .dropdown-menu .lang_link span {
+    margin-left: 0.75rem;
+    flex: 1;
+}
+
+.lang .dropdown-menu li:hover {
+    color: #00aeef;
+}
+
+.lang .dropdown-menu li:not(:last-child) {
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.mobile-menu .lang {
+    padding: 0;
+    display: block;
+    margin: 0;
+}
+
+.lang .mobile-menu_subject {
+    display: flex;
+    align-items: center;
+    padding: 0 1.75rem 0.375rem 1.75rem;
+}
+
+.lang .mobile-menu_subject span {
+    margin-left: 0.75rem;
+    flex: 1;
+}
+
+.lang .mobile-menu_subject[aria-expanded="false"] svg {
+    transform: rotate(0);
+    transition: transform 0.3s;
+}
+
+.lang .mobile-menu_subject[aria-expanded="true"] svg {
+    transform: rotate(180deg)!important;
+    transition: transform 0.3s;
+}
+
+#lang-collapse ul {
+    list-style: none;
+    padding: 0;
+    background: #f7f7f7;
+}
+
+#lang-collapse ul li {
+    margin: 0 1.25rem;
+    padding: 1rem 0.5rem;
+}
+
+#lang-collapse ul li:not(:last-child) {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#lang-collapse ul li .lang_link {
+    display: flex;
+    align-items: center;
+}
+
+#lang-collapse ul li .lang_link span {
+    margin-left: 0.75rem;
+    flex: 1;
+}
+
